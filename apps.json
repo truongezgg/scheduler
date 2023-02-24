@@ -1,0 +1,25 @@
+{
+  "apps": [
+    {
+      "name": "api",
+      "script": "./dist/apps/api/apps/api/src/main.js",
+      "instances": 1,
+      "exec_mode": "cluster",
+      "max_memory_restart": "1000M"
+    },
+    {
+      "name": "api-admin",
+      "script": "./dist/apps/api-admin/apps/api-admin/src/main.js",
+      "instances": 1,
+      "exec_mode": "cluster",
+      "max_memory_restart": "1000M"
+    },
+    {
+      "name": "scheduler",
+      "script": "./dist/apps/scheduler/apps/scheduler/src/main.js",
+      "instances": 1,
+      "exec_mode": "cluster",
+      "max_memory_restart": "1000M"
+    }
+  ]
+}
