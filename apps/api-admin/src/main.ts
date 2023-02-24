@@ -1,8 +1,10 @@
+import { initSwaggerForAPIAdmin } from '@app/swagger';
 import { NestFactory } from '@nestjs/core';
 import { ApiAdminModule } from './api-admin.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(ApiAdminModule);
-  await app.listen(3000);
+  initSwaggerForAPIAdmin(app);
+  await app.listen(3002);
 }
 bootstrap();

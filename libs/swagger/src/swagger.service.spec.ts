@@ -1,18 +1,7 @@
-import { Test, TestingModule } from '@nestjs/testing';
-import { SwaggerService } from './swagger.service';
+import { initSwaggerForAPI } from './index';
 
 describe('SwaggerService', () => {
-  let service: SwaggerService;
-
-  beforeEach(async () => {
-    const module: TestingModule = await Test.createTestingModule({
-      providers: [SwaggerService],
-    }).compile();
-
-    service = module.get<SwaggerService>(SwaggerService);
-  });
-
-  it('should be defined', () => {
-    expect(service).toBeDefined();
+  it('initSwaggerForAPI should be defined', () => {
+    expect(initSwaggerForAPI).toBeDefined();
   });
 });
